@@ -1,11 +1,15 @@
 import React, {useContext} from 'react'
-import { AppContext } from './context'
-
+import Movies from './Movies'
+import Search from './Search'
 
 const Home = () => {
-  const data = useContext(AppContext)
+
   return (
-    <h1>Home {data}</h1>
+    <>
+    <Search />
+    <Movies />
+
+    </>
   )
 }
 

@@ -3,6 +3,7 @@ import Home from './Home'
 import SingleMovie from './SingleMovie'
 import Error from './Error';
 import { BrowserRouter as Router, Routes, Route }  from 'react-router-dom'
+import Movies from './Movies';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
+    
     
   );
 }
