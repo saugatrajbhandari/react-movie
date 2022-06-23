@@ -1,19 +1,31 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import { useGlobalContext } from './context'
 
 const Movies = () => {
   const {movie} = useGlobalContext();
-  console.log(movie);
   return (
     <>
-      <h1>Movies</h1>
-      {
-        movie.map((currMovie) => {return(
-          <div>
-            <h1>{currMovie.Title}</h1>
-          </div>
-        )})
+      <section className='movie-page'>
+        <div class="container grid grid-4-col">
+
+        {
+        movie.map((currMovie) => {
+          const {imdbID, Title, Poster} = currMovie;
+          return <NavLink to={`movie/${imdbID}`} key={imdbID}>
+            <div className='card'>
+              <div className='card-info'>
+                <h2>{Title}</h2>
+                <img src={Poster} alt={imdbID} />
+              </div>
+            </div>
+          </NavLink>
+          
+        })
       }
+
+        </div>
+      </section>
 
     </>
   )
