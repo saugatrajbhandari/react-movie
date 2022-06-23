@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const AppContext = createContext();
 
-const API_URL = `https://www.omdbapi.com/?apikey=d1c5a748&s=titanic`
+const API_URL = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=titanic`
 
 
 const AppProvider = ({children}) => {
@@ -43,3 +43,4 @@ const useGlobalContext = () =>{
 }
 
 export {AppProvider, AppContext, useGlobalContext}
+
