@@ -3,13 +3,12 @@ import { useGlobalContext } from './context'
 
 const Movies = () => {
   const {movie} = useGlobalContext();
-  console.log(movie);
   return (
     <>
       <h1>Movies</h1>
       {
-        movie.map((currMovie) => {return(
-          <div>
+        movie.map((currMovie, index) => {return(
+          <div key={index}>
             <h1>{currMovie.Title}</h1>
           </div>
         )})
