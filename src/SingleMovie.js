@@ -5,7 +5,7 @@ const SingleMovie = () => {
   const { id } = useParams();
   return (
     <div> 
-      Our Single movie
+      Our Single movie {id}
     </div>
   )
 }
