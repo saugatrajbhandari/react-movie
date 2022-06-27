@@ -6,6 +6,11 @@ const Movies = () => {
   const {movie} = useGlobalContext();
   return (
     <>
+
+      <h1>Movies</h1>
+      {
+       
+
       <section className='movie-page'>
         <div class="container grid grid-4-col">
 
@@ -23,6 +28,7 @@ const Movies = () => {
           </NavLink>
           
         })
+
       }
 
         </div>
