@@ -43,7 +43,7 @@ const AppProvider = ({children}) => {
 
     }, [query])
 
-    return <AppContext.Provider value={{isLoading, isError, movie, query, setQuery}}>
+    return <AppContext.Provider value={{isLoading, isError, movie, query, setQuery, getMovies, API_URL, setIsLoading}}>
         {children}
     </AppContext.Provider>
 }
